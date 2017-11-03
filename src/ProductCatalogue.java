@@ -10,9 +10,11 @@ public class ProductCatalogue {
 		populateProducts();
 	}
 	
+	// SKU format: SKUXXXXX-XX
+	
 	public void populateProducts() {
-		products.add(new Product("SKU00001RE", "Agile T-Shirt - Red", 19.90));
-		products.add(new Product("SKU00001WH", "Agile T-Shirt - White", 19.90));
+		products.add(new Product("SKU00001-RE", "Agile T-Shirt - Red", 19.90));
+		products.add(new Product("SKU00001-WH", "Agile T-Shirt - White", 19.90));
 	}
 	
 	public List<Product> getProducts() {
