@@ -99,7 +99,7 @@ public class test {
 		DiscountEngine e = new DiscountEngine();
 		 e.calculateItemDiscounts(listOfProduct);
 		 
-		 assertEquals(20*0.7+30,  e.calculateItemDiscounts(listOfProduct),0.01);
+		 assertEquals(10*0.7,  e.calculateItemDiscounts(listOfProduct),0.01);
 		 //test
 	}
 
@@ -115,7 +115,7 @@ public class test {
 		DiscountEngine e = new DiscountEngine();
 		 e.calculateItemDiscounts(listOfProduct);
 		 
-		 assertEquals(40*0.7+10,  e.calculateItemDiscounts(listOfProduct),0.01);
+		 assertEquals(20*0.3,  e.calculateItemDiscounts(listOfProduct),0.01);
 	}
 
 }
