@@ -9,6 +9,7 @@ public class POS {
 	public static void main(String[] args) {
 		
 		ProductCatalogue pc = new ProductCatalogue();
+		DiscountEngine de = new DiscountEngine();
 		Scanner input = new Scanner(System.in);
 		List<Product> order = new ArrayList<Product>();
 		
@@ -86,10 +87,18 @@ public class POS {
 					System.out.println("==================================================");
 					System.out.println();
 					
+					double totalPrice = 0;
+					
 					if (order.size() > 0) {
 						for (int i = 0; i < order.size(); i++) {
 							System.out.println("  " + (i+1) + ".\t[" + order.get(i).getDescription() + "] ----- $" + df.format(order.get(i).getPrice()));
+							totalPrice = totalPrice + order.get(i).getPrice();
 						}
+						
+						System.out.println();
+						System.out.println("  TOTAL BEFORE DISCOUNT: $" + df.format(totalPrice));
+						System.out.println("  DISCOUNT APPLIED: $" + df.format(de.calculateItemDiscounts(order)));
+						System.out.println("  TOTAL AFTER DISCOUNT: $" + df.format(totalPrice - de.calculateItemDiscounts(order)));
 					}
 					else {
 						System.out.println("  No items in order.");
