@@ -12,7 +12,7 @@ public class test {
 		products.add(new Product("SKU00001WH", "Agile T-Shirt - White", 19.90));
 		 */
 		
-		POS pos = new POS();
+	//	POS pos = new POS();
 	//	pos.add("SKU00001RE");
 		
 		
