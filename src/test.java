@@ -48,17 +48,9 @@ public class test {
 
 	@Test
 	public void testComputeWithOneProductNoDiscount(){
-		/*
-		 * 
-		 * 
-		 * 	public Product(String sKU, String description, double price) {
-		super();
-		SKU = sKU;
-		this.description = description;
-		this.price = price;
-	}*/
 
-		ArrayList listOfProduct = new ArrayList();
+
+		ArrayList <Product> listOfProduct = new ArrayList();
 		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
 		
 		DiscountEngine e = new DiscountEngine();
@@ -70,14 +62,21 @@ public class test {
 
 	@Test
 	public void testComputeWithTwoProductNoDiscount(){
-		fail("Not yet implemented");
+		ArrayList <Product> listOfProduct = new ArrayList();
+		listOfProduct.add(new Product("SKU00001-RE","Item 1 RE",10.0));
+		listOfProduct.add(new Product("SKU00002-RE","Item 2 RE",10.0));
+		
+		DiscountEngine e = new DiscountEngine();
+		 e.calculateItemDiscounts(listOfProduct);
+		 
+		 
+		 assertEquals(20,e.calculateItemDiscounts(listOfProduct) ,0.01);
+		
 	}
 
 	@Test
 	public void testComputeWithTwoProductOneDiscount(){
-		fail("Not yet implemented");
-		
-		ArrayList listOfProduct = new ArrayList();
+		ArrayList <Product> listOfProduct = new ArrayList();
 		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
 		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
 		
@@ -90,12 +89,33 @@ public class test {
 
 	@Test
 	public void testComputeWithFiveProductOneDiscount(){
-		fail("Not yet implemented");
+		ArrayList <Product> listOfProduct = new ArrayList();
+		listOfProduct.add(new Product("SKU00001-RE","Item 1 RE",10.0));
+		listOfProduct.add(new Product("SKU00002-RE","Item 2 RE",10.0));
+		listOfProduct.add(new Product("SKU00001-RE","Item 1 RE",10.0));
+		listOfProduct.add(new Product("SKU00003-RE","Item 3 RE",10.0));
+		listOfProduct.add(new Product("SKU00004-RE","Item 4 RE",10.0));
+		
+		DiscountEngine e = new DiscountEngine();
+		 e.calculateItemDiscounts(listOfProduct);
+		 
+		 assertEquals(10*0.7,  e.calculateItemDiscounts(listOfProduct),0.01);
+		 //test
 	}
 
 	@Test
 	public void testComputeWithFiveProductTwoDiscount(){
-		fail("Not yet implemented");
+		ArrayList <Product> listOfProduct = new ArrayList();
+		listOfProduct.add(new Product("SKU00001-RE","Item 1 RE",10.0));
+		listOfProduct.add(new Product("SKU00002-RE","Item 2 RE",10.0));
+		listOfProduct.add(new Product("SKU00001-RE","Item 1 RE",10.0));
+		listOfProduct.add(new Product("SKU00003-RE","Item 3 RE",10.0));
+		listOfProduct.add(new Product("SKU00002-RE","Item 2 RE",10.0));
+		
+		DiscountEngine e = new DiscountEngine();
+		 e.calculateItemDiscounts(listOfProduct);
+		 
+		 assertEquals(20*0.3,  e.calculateItemDiscounts(listOfProduct),0.01);
 	}
 
 }

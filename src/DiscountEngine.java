@@ -32,7 +32,7 @@ public class DiscountEngine {
 			for(int i=0;i<skuProducts.size();i++) {
 				Product skuProduct = skuProducts.get(i);
 				if(i%2!=0) {
-					totalDiscount+=skuProduct.getPrice()*DISCOUNT_PCT_30;
+					totalDiscount+=skuProduct.getPrice()*(DISCOUNT_PCT_30/100);
 				}
 			}
 		}
