@@ -35,4 +35,11 @@ public class Product {
 		this.price = price;
 	}
 	
+	public String getBaseSKU() {
+		if(this.SKU==null || this.SKU.length()==0) return null;
+
+		String[] tokens = this.SKU.split("-");
+		return tokens[0];
+	}
+	
 }
