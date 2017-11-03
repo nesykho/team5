@@ -66,9 +66,6 @@ public class test {
 		 
 		 assertEquals(10,  e.calculateItemDiscounts(listOfProduct),0.01);
 		 
-		 
-	
-		fail("Not yet implemented");
 	}
 
 	@Test
@@ -79,6 +76,16 @@ public class test {
 	@Test
 	public void testComputeWithTwoProductOneDiscount(){
 		fail("Not yet implemented");
+		
+		ArrayList listOfProduct = new ArrayList();
+		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
+		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
+		
+		DiscountEngine e = new DiscountEngine();
+		 e.calculateItemDiscounts(listOfProduct);
+		 
+		 assertEquals(20*0.7,  e.calculateItemDiscounts(listOfProduct),0.01);
+		 
 	}
 
 	@Test
