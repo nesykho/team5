@@ -58,7 +58,7 @@ public class test {
 		this.price = price;
 	}*/
 
-		ArrayList listOfProduct = new ArrayList();
+		ArrayList <Product> listOfProduct = new ArrayList();
 		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
 		
 		DiscountEngine e = new DiscountEngine();
@@ -83,9 +83,7 @@ public class test {
 
 	@Test
 	public void testComputeWithTwoProductOneDiscount(){
-		fail("Not yet implemented");
-		
-		ArrayList listOfProduct = new ArrayList();
+		ArrayList <Product> listOfProduct = new ArrayList();
 		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
 		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
 		
