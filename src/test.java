@@ -48,15 +48,7 @@ public class test {
 
 	@Test
 	public void testComputeWithOneProductNoDiscount(){
-		/*
-		 * 
-		 * 
-		 * 	public Product(String sKU, String description, double price) {
-		super();
-		SKU = sKU;
-		this.description = description;
-		this.price = price;
-	}*/
+
 
 		ArrayList <Product> listOfProduct = new ArrayList();
 		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
@@ -77,7 +69,8 @@ public class test {
 		DiscountEngine e = new DiscountEngine();
 		 e.calculateItemDiscounts(listOfProduct);
 		 
-		 assertEquals(20,  e.calculateItemDiscounts(listOfProduct),0.01);
+		 
+		 assertEquals(20,e.calculateItemDiscounts(listOfProduct) ,0.01);
 		
 	}
 
