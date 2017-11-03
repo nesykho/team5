@@ -45,7 +45,7 @@
             <classpath refid="Team5.classpath"/>
         </javac>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
-            <src path="test"/>
+            <!--src path="test"/-->
             <classpath refid="Team5.classpath"/>
         </javac>
     </target>
