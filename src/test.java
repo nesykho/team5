@@ -48,6 +48,26 @@ public class test {
 
 	@Test
 	public void testComputeWithOneProductNoDiscount(){
+		/*
+		 * 
+		 * 
+		 * 	public Product(String sKU, String description, double price) {
+		super();
+		SKU = sKU;
+		this.description = description;
+		this.price = price;
+	}*/
+
+		ArrayList listOfProduct = new ArrayList();
+		listOfProduct.add(new Product("SKU00001-RE","TESTINE RE",10.0));
+		
+		DiscountEngine e = new DiscountEngine();
+		 e.calculateItemDiscounts(listOfProduct);
+		 
+		 assertEquals(10,  e.calculateItemDiscounts(listOfProduct),0.01);
+		 
+		 
+	
 		fail("Not yet implemented");
 	}
 
