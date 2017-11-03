@@ -109,7 +109,7 @@ public class test {
 		 e.calculateItemDiscounts(listOfProduct);
 		 
 		 assertEquals(20*0.7+30,  e.calculateItemDiscounts(listOfProduct),0.01);
-
+		 //test
 	}
 
 	@Test
