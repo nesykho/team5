@@ -12,6 +12,11 @@
     <path id="Team5.classpath">
         <pathelement location="bin"/>
     </path>
+                <path id="JUnit 4.libraryclasspath">
+                                  <pathelement location="jarfile/junit.jar"/>
+                                  <pathelement location="jarfile/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+                          </path>
+                            	
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
@@ -48,4 +53,5 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+              
 </project>
