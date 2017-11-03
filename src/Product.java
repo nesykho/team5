@@ -41,5 +41,11 @@ public class Product {
 		String[] tokens = this.SKU.split("-");
 		return tokens[0];
 	}
+
+	@Override
+	public String toString() {
+		return "Product [SKU=" + SKU + ", description=" + description + ", price=" + price + "]";
+	}
+	
 	
 }
