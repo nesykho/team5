@@ -99,7 +99,7 @@ public class test {
 		DiscountEngine e = new DiscountEngine();
 		 e.calculateItemDiscounts(listOfProduct);
 		 
-		 assertEquals(10*0.7,  e.calculateItemDiscounts(listOfProduct),0.01);
+		 assertEquals(10*0.3,  e.calculateItemDiscounts(listOfProduct),0.01);
 		 //test
 	}
 
